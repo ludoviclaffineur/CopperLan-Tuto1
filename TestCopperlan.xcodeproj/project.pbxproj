@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FEC7C4C71B50037800FF5E21 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEC7C4C61B50037800FF5E21 /* main.cpp */; };
+		FEC7C4CF1B50039D00FF5E21 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEC7C4CD1B50039D00FF5E21 /* Engine.cpp */; };
+		FEC7C4D11B5008B700FF5E21 /* libCHAI-MacOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC7C4D01B5008B700FF5E21 /* libCHAI-MacOS.a */; };
+		FEC7C4D31B50099900FF5E21 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC7C4D21B50099900FF5E21 /* CoreFoundation.framework */; };
+		FEC7C4D71B500A3000FF5E21 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC7C4D61B500A3000FF5E21 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,11 @@
 /* Begin PBXFileReference section */
 		FEC7C4C31B50037800FF5E21 /* TestCopperlan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestCopperlan; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC7C4C61B50037800FF5E21 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FEC7C4CD1B50039D00FF5E21 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		FEC7C4CE1B50039D00FF5E21 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		FEC7C4D01B5008B700FF5E21 /* libCHAI-MacOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCHAI-MacOS.a"; path = "../sdks/MacSDK/Libs/MacOS/libCHAI-MacOS.a"; sourceTree = "<group>"; };
+		FEC7C4D21B50099900FF5E21 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FEC7C4D61B500A3000FF5E21 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC7C4D71B500A3000FF5E21 /* Cocoa.framework in Frameworks */,
+				FEC7C4D31B50099900FF5E21 /* CoreFoundation.framework in Frameworks */,
+				FEC7C4D11B5008B700FF5E21 /* libCHAI-MacOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +53,11 @@
 		FEC7C4BA1B50037800FF5E21 = {
 			isa = PBXGroup;
 			children = (
+				FEC7C4D61B500A3000FF5E21 /* Cocoa.framework */,
+				FEC7C4D21B50099900FF5E21 /* CoreFoundation.framework */,
 				FEC7C4C51B50037800FF5E21 /* TestCopperlan */,
 				FEC7C4C41B50037800FF5E21 /* Products */,
+				FEC7C4D01B5008B700FF5E21 /* libCHAI-MacOS.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				FEC7C4C61B50037800FF5E21 /* main.cpp */,
+				FEC7C4CD1B50039D00FF5E21 /* Engine.cpp */,
+				FEC7C4CE1B50039D00FF5E21 /* Engine.h */,
 			);
 			path = TestCopperlan;
 			sourceTree = "<group>";
@@ -119,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEC7C4C71B50037800FF5E21 /* main.cpp in Sources */,
+				FEC7C4CF1B50039D00FF5E21 /* Engine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,14 +223,28 @@
 		FEC7C4CB1B50037800FF5E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ludoviclaffineur/Documents/sdks/MacSDK/Libs/MacOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/ludoviclaffineur/Documents/sdks/MacSDK/Includes;
 			};
 			name = Debug;
 		};
 		FEC7C4CC1B50037800FF5E21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ludoviclaffineur/Documents/sdks/MacSDK/Libs/MacOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/ludoviclaffineur/Documents/sdks/MacSDK/Includes;
 			};
 			name = Release;
 		};

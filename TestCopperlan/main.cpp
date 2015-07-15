@@ -7,9 +7,18 @@
 //
 
 #include <iostream>
+#include "Engine.h"
+Engine g_Engine;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main(int argc, char* argv[]) {
+    //Initialisation
+    if (g_Engine.Initialize())
+    {
+        printf("Program running... Press any key to exit\n");
+        getchar();
+        // Terminaison
+        g_Engine.Terminate();
+    }
+    else
+        printf("aborting...\n");
 }
