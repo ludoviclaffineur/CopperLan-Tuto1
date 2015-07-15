@@ -167,7 +167,8 @@ void Engine::Terminate()
     m_pDevice = NULL;
     m_pInput = NULL;
     m_pOutput = NULL;
-}```
+}
+```
 
 That's it; you now have an application that declares a Device, an Input, and an Output on the network.
 At this stage, it is possible to send it messages and add it destinations. Keep in mind that nothing will happen yet, given that we don't handle the incoming messages and we don't send any!
