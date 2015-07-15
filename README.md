@@ -111,7 +111,12 @@ bool Engine::Initialize()
     // 2) the name of the input
 
     m_pInput = m_pDevice->AddInput(
-                                   CPNS::Enums::IOC_Msg_Event | CPNS::Enums::IOC_Msg_Modifier | CPNS::Enums::IOC_Msg_Selector, "Input",CPNS::SectionID::AnyInstanceOf(CPNS::Enums::SECT_Other));
+                                   CPNS::Enums::IOC_Msg_Event |
+                                   CPNS::Enums::IOC_Msg_Modifier |
+                                   CPNS::Enums::IOC_Msg_Selector,
+                                    "Input",
+                                   CPNS::SectionID::AnyInstanceOf(CPNS::Enums::SECT_Other)
+                                  );
 
     if (!m_pInput) return false;
 
@@ -123,8 +128,11 @@ bool Engine::Initialize()
     // 2) the name of the output
 
     m_pOutput = m_pDevice->AddOutput(
-                                     CPNS::Enums::IOC_Msg_Modifier | CPNS::Enums::IOC_Msg_Event | CPNS::Enums::IOC_Msg_Selector,
-                                     "Output",CPNS::SectionID::AnyInstanceOf(CPNS::Enums::SECT_Other));
+                                     CPNS::Enums::IOC_Msg_Modifier |
+                                     CPNS::Enums::IOC_Msg_Event |
+                                     CPNS::Enums::IOC_Msg_Selector,
+                                     "Output",
+                                     CPNS::SectionID::AnyInstanceOf(CPNS::Enums::SECT_Other));
 
     if (!m_pOutput) return false;
 
